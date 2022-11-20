@@ -8,13 +8,16 @@ import reportWebVitals from './reportWebVitals'
 import { ProductsProvider } from './contexts/products.context'
 
 import './index.scss'
+import { CartProvider } from './contexts/cart.context'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
         <ProductsProvider>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
         </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
